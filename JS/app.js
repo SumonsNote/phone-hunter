@@ -21,7 +21,9 @@ const showPhone = (phones) => {
   const phoneContainer = document.getElementById("phone-container");
   for (const phone of phones) {
     const div = document.createElement("div");
-    div.classList.add('col-md-4')
+    div.classList.add('col-lg-4')
+    div.classList.add('col-md-6')
+    div.classList.add('col-12')
     div.innerHTML = `
         <div class="card mt-5 container" style="width: 18rem;">
         <img width="200px" src="${phone.image}" class="card-img-top" alt="...">
