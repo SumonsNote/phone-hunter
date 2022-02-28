@@ -4,6 +4,7 @@ const phoneFinder = () => {
   document.getElementById("phone-finder-input").value = "";
   if(!inputValue) {
       document.getElementById('typeError').style.display = 'block'
+      document.getElementById('phone-detail-container').innerHTML = ''
   }
   else {
     const url = `https://openapi.programming-hero.com/api/phones?search=${inputValue}
@@ -14,6 +15,7 @@ const phoneFinder = () => {
     document.getElementById('typeError').style.display = 'none'
   }
 };
+
 
 const showPhone = (phones) => {
   const phoneContainer = document.getElementById("phone-container");
