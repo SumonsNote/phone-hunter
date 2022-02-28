@@ -12,13 +12,18 @@
 </head>
 <body>
     <div id="imglogo" class="text-center mt-5">
-        <img width="200px" src="./img/finder.png" alt="">
+        <a href="">
+            <img width="200px" src="./img/finder.png" alt="">
+        </a>
         <h1>PHONE FINDER</h1>
     </div>
     <div class="input-group mt-5 w-50 container">
-        <input type="text" class="form-control" placeholder="type what phone you find" aria-label="Recipient's username" aria-describedby="button-addon2">
-        <button class="btn btn-outline-secondary" type="button" id="button-addon2">Search</button>
+        <input id="phone-finder-input" type="text" class="form-control" placeholder="type what phone you find" aria-label="Recipient's username" aria-describedby="button-addon2">
+        <button class="btn btn-outline-secondary" type="button" onclick="phoneFinder()">Search</button>
       </div>
+      <h4 id="typeError" class="text-center text-danger mt-4">type what phone you want to find</h4>
+      <div class="row mx-auto" id="phone-container"></div>
+      <div class="row mx-auto" id="phone-detail-container"></div>
     <script src="./JS/app.js"></script>
 </body>
 </html>
