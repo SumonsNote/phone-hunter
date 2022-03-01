@@ -66,7 +66,7 @@ const showPhoneDetails = (phoneDetail) => {
       <p><b>Chipset:</b> ${phoneDetail.mainFeatures.chipSet}<br>,<b>Size:</b> ${phoneDetail.mainFeatures.displaySize}</p><br>
       <p><b>Memoery:</b> ${phoneDetail.mainFeatures.storage}</p><br>
       <p><b>Sensors:</b> ${phoneDetail.mainFeatures.sensors}</p><br>
-      <p><b>Bluetooth:</b> ${phoneDetail.others.Bluetooth}<br><b>GPS:</b> ${phoneDetail.others.GPS}<br><b>NFC:</b> ${phoneDetail.others.NFC}<br><b>Radio:</b> ${phoneDetail.others.Radio}<br><b>USB:</b> ${phoneDetail.others.USB}<br><b>WLAN:</b> ${phoneDetail.others.WLAN}</p>
+      <p><b>Bluetooth:</b> ${phoneDetail.others?.Bluetooth}<br><b>GPS:</b> ${phoneDetail.others?.GPS}<br><b>NFC:</b> ${phoneDetail.others?.NFC}<br><b>Radio:</b> ${phoneDetail.others?.Radio}<br><b>USB:</b> ${phoneDetail.others?.USB}<br><b>WLAN:</b> ${phoneDetail.others?.WLAN}</p>
     </div>
   </div>
     `;
