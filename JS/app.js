@@ -24,6 +24,7 @@ const showPhone = (phones) => {
   const resultPhone = phones.slice(0,20);
   if(resultPhone.length == 0) {
     document.getElementById("typeError2").style.display = "block";
+    document.getElementById("phone-detail-container").innerHTML = "";
   }
   for (const phone of resultPhone) {
     const div = document.createElement("div");
