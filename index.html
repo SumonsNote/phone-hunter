@@ -11,20 +11,25 @@
       <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    <!-- Logo and title -->
     <div id="imglogo" class="text-center mt-5">
         <a href="">
             <img width="200px" src="./img/finder.png" alt="">
         </a>
         <h1>PHONE FINDER</h1>
     </div>
+    <!-- Search option -->
     <div class="input-group mt-5 w-50 container">
         <input id="phone-finder-input" type="text" class="form-control" placeholder="type what phone you find" aria-label="Recipient's username" aria-describedby="button-addon2">
         <button class="btn btn-outline-secondary" type="button" onclick="phoneFinder()">Search</button>
       </div>
+      <!-- Error validation -->
       <h4 id="typeError" class="text-center text-danger mt-4">type what phone you want to find</h4>
       <h4 id="typeError2" class="text-center text-danger mt-4">No results found</h4>
+      <!-- Website UI -->
       <div class="row mx-auto" id="phone-container"></div>
       <div class="row mx-auto" id="phone-detail-container"></div>
+      <!-- Javascript file -->
     <script src="./JS/app.js"></script>
 </body>
 </html>

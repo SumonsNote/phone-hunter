@@ -1,11 +1,14 @@
+// search button control
 const phoneFinder = () => {
   document.getElementById("phone-container").innerHTML = "";
   const inputValue = document.getElementById("phone-finder-input").value;
   document.getElementById("phone-finder-input").value = "";
+  // search option validation
   if (!inputValue) {
     document.getElementById("typeError").style.display = "block";
     document.getElementById("phone-detail-container").innerHTML = "";
   } else {
+    // calling from api phone primay cheking
     const url = `https://openapi.programming-hero.com/api/phones?search=${inputValue}
     `;
     fetch(url)
@@ -15,7 +18,7 @@ const phoneFinder = () => {
     document.getElementById("typeError2").style.display = "none";
   }
 };
-
+// UI container main
 const showPhone = (phones) => {
   const phoneContainer = document.getElementById("phone-container");
   const resultPhone = phones.slice(0,20);
@@ -40,14 +43,14 @@ const showPhone = (phones) => {
     phoneContainer.appendChild(div);
   }
 };
-
+// calling from api the phone details
 const phoneDetails = (phone) => {
   const url = `https://openapi.programming-hero.com/api/phone/${phone}`;
   fetch(url)
     .then((res) => res.json())
     .then((data) => showPhoneDetails(data.data));
 };
-
+// UI container phone details
 const showPhoneDetails = (phoneDetail) => {
   document.getElementById("phone-container").innerHTML = "";
   const phoneDetailContainer = document.getElementById(
