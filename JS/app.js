@@ -12,12 +12,16 @@ const phoneFinder = () => {
       .then((res) => res.json())
       .then((data) => showPhone(data.data));
     document.getElementById("typeError").style.display = "none";
+    document.getElementById("typeError2").style.display = "none";
   }
 };
 
 const showPhone = (phones) => {
   const phoneContainer = document.getElementById("phone-container");
   const resultPhone = phones.slice(0,20);
+  if(resultPhone.length == 0) {
+    document.getElementById("typeError2").style.display = "block";
+  }
   for (const phone of resultPhone) {
     const div = document.createElement("div");
     div.classList.add("col-lg-4");
