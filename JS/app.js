@@ -1,6 +1,7 @@
 // search button control
 const phoneFinder = () => {
   document.getElementById("phone-container").innerHTML = "";
+  document.getElementById("phone-detail-container").innerHTML = "";
   const inputValue = document.getElementById("phone-finder-input").value;
   document.getElementById("phone-finder-input").value = "";
   // search option validation
