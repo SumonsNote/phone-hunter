@@ -7,6 +7,7 @@ const phoneFinder = () => {
   if (!inputValue) {
     document.getElementById("typeError").style.display = "block";
     document.getElementById("phone-detail-container").innerHTML = "";
+    document.getElementById("typeError2").style.display = "none";
   } else {
     // calling from api phone primay cheking
     const url = `https://openapi.programming-hero.com/api/phones?search=${inputValue}
